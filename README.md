@@ -35,7 +35,8 @@ Before you can run Agent_P, you must have the following software installed on yo
 2.  **Node.js:** Required for the frontend. `v20.x` or higher is recommended.
     - [Download Node.js](https://nodejs.org/)
 3.  **Rust:** The backend is written in Rust.
-    - Install via `rustup`: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+    - Go to the official Rust website: [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
+    - Download and run `rustup-init.exe`.
 4.  **Tauri Prerequisites:** You need to install several system dependencies for Tauri development.
     - [Tauri Prerequisites Guide](https://tauri.app/v1/guides/getting-started/prerequisites) (Follow the instructions for your specific OS).
 5.  **Ollama:** To run the local large language model.
@@ -50,7 +51,7 @@ Follow these steps to get your local development environment up and running.
 1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/RougeVader/Agent_P_v1.0.git
-    cd Agent_P
+    cd Agent_P_v1.0
     ```
 
 2.  **Install Frontend Dependencies:**

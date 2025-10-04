@@ -25,10 +25,10 @@ struct OllamaGenerateResponse {
 async fn ask_ollama(prompt: String) -> Result<String, String> {
     let client = reqwest::Client::new();
 
-    let system_prompt = "You are Agent_P, a friendly, witty, and encouraging AI companion. Your goal is to be a helpful partner, not just a utility. Keep your responses concise and maintain a positive and slightly playful tone.".to_string();
+    let system_prompt = "You are Agent_P, a helpful and professional AI assistant. Provide clear, concise, and accurate responses. When explaining mathematical or technical concepts, do so in a simple and clear way. If you use technical notation, please explain it.".to_string();
 
     let request_body = OllamaGenerateRequest {
-        model: "llava:13b",
+        model: "phi3",
         prompt,
         system: system_prompt,
         stream: false,

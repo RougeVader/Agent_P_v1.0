@@ -69,10 +69,19 @@ Follow these steps to get your local development environment up and running.
     *(Ensure the Ollama application is running before executing this command.)*
 
 4.  **Run the Application:**
+
+    You have two ways to run the application:
+
+    **Option 1: Manual Start**
+
     This command will launch the Tauri application in development mode.
     ```bash
     npm run tauri dev
     ```
+
+    **Option 2: Using the Batch File**
+
+    After completing all the download and setup steps, you can simply run the `start_agent.bat` file. This will start the application for you.
 
 ---
 

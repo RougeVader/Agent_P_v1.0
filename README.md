@@ -1,4 +1,3 @@
-
 # 🤖 Agent_P: Your Desktop AI Assistant
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
@@ -14,7 +13,10 @@ The goal of Agent_P is to provide a powerful, extensible, and private AI compani
 
 ### ✨ Features
 - **Private & Local:** All AI processing happens on your machine. No data is sent to the cloud.
-- **Modern UI:** A clean and intuitive interface built with React and TypeScript.
+- **Modern UI:** A clean and intuitive chat interface built with React and TypeScript.
+- **Local LLM Support:** Connects to your local Ollama instance to use any of your installed models.
+- **Model Selection:** Easily switch between different AI models from within the application.
+- **Real-time Interaction:** Get instant feedback with a loading indicator while the AI is thinking.
 - **High Performance:** A Rust-based backend via Tauri ensures a small footprint and snappy performance.
 - **Extensible:** Designed with future enhancements in mind.
 
@@ -59,8 +61,8 @@ Follow these steps to get your local development environment up and running.
     npm install
     ```
 
-3.  **Download the LLM:**
-    Agent_P is configured to work well with `phi3`. Pull it using Ollama:
+3.  **Download an LLM:**
+    Agent_P can work with any model from Ollama. We recommend `phi3` for a good balance of performance and capability.
     ```bash
     ollama pull phi3
     ```
@@ -80,8 +82,9 @@ This project is just getting started. Here is a glimpse of the planned roadmap:
 
 -   **Phase 1: Core Chat Functionality**
     -   [x] Basic UI for chat interaction.
-    -   [ ] Connect UI to the Ollama backend service.
-    -   [ ] Stream responses from the model for real-time feedback.
+    -   [x] Connect UI to the Ollama backend service.
+    -   [x] Stream responses from the model for real-time feedback.
+    -   [x] Model selection from available Ollama models.
 
 -   **Phase 2: Agentic Capabilities & Tools**
     -   [ ] Implement a tool-use framework for the agent.

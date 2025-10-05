@@ -106,6 +106,13 @@ Follow these steps to get your local development environment up and running.
     -   [ ] **Proactive Assistance:** Allow the agent to anticipate user needs and proactively offer suggestions or even perform tasks in the background (with permission).
     -   [ ] **Customizable Personas:** Let the user choose from different agent personas (e.g., formal, friendly, humorous) to tailor the interaction style.
 
+-   **Phase 5: Security Hardening & Trust**
+    -   [ ] **Granular Permissions System:** Implement a settings panel for users to individually enable or disable high-risk capabilities, ensuring everything is disabled by default.
+    -   [ ] **Per-Action Confirmation:** Enforce a mandatory confirmation prompt for all sensitive actions, where the agent explains what it is about to do and waits for explicit user approval.
+    -   [ ] **Secure Code Sandboxing:** Develop and integrate a tightly controlled sandbox for the code execution tool, with no default access to the user's file system or network.
+    -   [ ] **Comprehensive Audit Logging:** Create a transparent, user-friendly logging system that provides a clear and permanent record of all agent actions.
+    -   [ ] **Community Security Audits:** Actively encourage and facilitate community-led security reviews of the open-source code to identify and resolve vulnerabilities.
+
 ---
 
 ## 🙌 Contributing

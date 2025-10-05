@@ -85,28 +85,26 @@ Follow these steps to get your local development environment up and running.
 
 ---
 
-## 🛣️ Future Phases
-
-This project is just getting started. Here is a glimpse of the planned roadmap:
-
--   **Phase 1: Core Chat Functionality**
-    -   [x] Basic UI for chat interaction.
-    -   [x] Connect UI to the Ollama backend service.
-    -   [x] Stream responses from the model for real-time feedback.
-    -   [x] Model selection from available Ollama models.
+## 🛣️ Expanded Future Phases
 
 -   **Phase 2: Agentic Capabilities & Tools**
-    -   [ ] Implement a tool-use framework for the agent.
-    -   [ ] Add a file system tool (e.g., read/write files).
-    -   [ ] Add a web search tool.
+    -   [ ] **Advanced Tool-Use Framework:** Implement a robust framework for the agent to use multiple tools in combination to solve complex problems.
+    -   [ ] **File System Tools:** Allow the agent to read, write, and manage files and directories.
+    -   [ ] **Web Search & Browsing:** Grant the ability to search the web and browse websites to gather information.
+    -   [ ] **Code Execution:** Add a secure, sandboxed environment for the agent to write and execute code (e.g., Python, JavaScript) to perform complex tasks.
+    -   [ ] **System Integration:** Enable interaction with the OS to manage calendars, send notifications, and control other applications (with user permission).
 
--   **Phase 3: Long-Term Memory**
-    -   [ ] Integrate a local vector database (e.g., LanceDB) for memory.
-    -   [ ] Implement retrieval-augmented generation (RAG) to provide context from past conversations.
+-   **Phase 3: Long-Term Memory & Learning**
+    -   [ ] **Hybrid Memory System:** Integrate a local vector database (e.g., LanceDB) for conversational memory and a structured knowledge graph for storing facts, entities, and user preferences.
+    -   [ ] **Retrieval-Augmented Generation (RAG):** Use the memory system to provide deep context from past conversations and learned facts.
+    -   [ ] **Self-Correction & Learning:** Implement a mechanism for the agent to reflect on its actions, learn from mistakes, and improve its tool usage and responses over time.
+    -   [ ] **Personalized Memory:** Allow the user to explicitly teach the agent facts and preferences that are stored in a dedicated, high-priority memory store.
 
--   **Phase 4: Advanced Interaction**
-    -   [ ] Add voice-to-text and text-to-speech for hands-free interaction.
-    -   [ ] Explore proactive assistance based on user context.
+-   **Phase 4: Advanced Interaction & Proactivity**
+    -   [ ] **Multi-modal Interaction:** Add voice-to-text and text-to-speech for hands-free operation.
+    -   [ ] **GUI Interaction:** Enable the agent to "see" the user's screen and interact with graphical user interfaces to automate tasks.
+    -   [ ] **Proactive Assistance:** Allow the agent to anticipate user needs and proactively offer suggestions or even perform tasks in the background (with permission).
+    -   [ ] **Customizable Personas:** Let the user choose from different agent personas (e.g., formal, friendly, humorous) to tailor the interaction style.
 
 ---
 

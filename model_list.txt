@@ -1,0 +1,3 @@
+NAME               ID              SIZE      MODIFIED       
+phi3:latest        4f2222927938    2.2 GB    50 minutes ago    
+bakllava:latest    3dd68bd4447c    4.7 GB    4 weeks ago       

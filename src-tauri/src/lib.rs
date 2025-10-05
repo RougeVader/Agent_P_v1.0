@@ -1,10 +1,16 @@
 use serde::{Deserialize, Serialize};
 use tauri_plugin_http::reqwest;
 
-// Learn more about Tauri commands at https://tauri.app/develop/calling-rust/ 
+// Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
 fn greet(name: &str) -> String {
     format!("Hello, {}! You've been greeted from Rust!", name)
+}
+
+#[tauri::command]
+fn get_models() -> Result<String, String> {
+    let path = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("..").join("model_list.txt");
+    std::fs::read_to_string(path).map_err(|e| e.to_string())
 }
 
 // Structs for the /api/generate endpoint
@@ -22,13 +28,13 @@ struct OllamaGenerateResponse {
 }
 
 #[tauri::command]
-async fn ask_ollama(prompt: String) -> Result<String, String> {
+async fn ask_ollama(prompt: String, model: String) -> Result<String, String> {
     let client = reqwest::Client::new();
 
     let system_prompt = "You are Agent_P, a helpful and professional AI assistant. Provide clear, concise, and accurate responses. When explaining mathematical or technical concepts, do so in a simple and clear way. If you use technical notation, please explain it.".to_string();
 
     let request_body = OllamaGenerateRequest {
-        model: "phi3",
+        model: &model,
         prompt,
         system: system_prompt,
         stream: false,
@@ -61,7 +67,7 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_http::init())
-        .invoke_handler(tauri::generate_handler![greet, ask_ollama])
+        .invoke_handler(tauri::generate_handler![greet, ask_ollama, get_models])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

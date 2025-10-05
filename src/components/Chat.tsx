@@ -14,6 +14,7 @@ const Chat = () => {
   const [prompt, setPrompt] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [model, setModel] = useState('mistral'); // Add model state
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const Chat = () => {
     setIsLoading(true);
 
     try {
-      const result = await invoke<string>('ask_ollama', { prompt: currentPrompt });
+      const result = await invoke<string>('ask_ollama', { prompt: currentPrompt, model });
       const aiMessage: Message = { text: result, sender: 'ai' };
       setMessages((prev) => [...prev, aiMessage]);
     } catch (e) {
@@ -48,7 +49,7 @@ const Chat = () => {
 
   return (
     <div className="flex flex-col h-screen bg-background text-foreground">
-      <ChatHeader />
+      <ChatHeader model={model} setModel={setModel} isLoading={isLoading} />
       <main className="flex-1 overflow-y-auto p-4 space-y-4" ref={chatContainerRef}>
         {messages.length === 0 && !isLoading ? (
           <div className="flex flex-col items-center justify-center h-full text-center">

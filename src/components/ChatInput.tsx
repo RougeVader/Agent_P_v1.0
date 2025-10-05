@@ -25,14 +25,16 @@ const ChatInput = ({ prompt, setPrompt, ask, isLoading }: ChatInputProps) => {
           ask();
         }}
       >
-        <input
-          className="flex-1 bg-transparent focus:outline-none text-foreground placeholder:text-muted-foreground"
-          value={prompt}
-          onChange={(e) => setPrompt(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder="Ask Agent_P anything..."
-          disabled={isLoading}
-        />
+        <div className="flex-1 flex items-center gap-2">
+          <input
+            className="flex-1 bg-transparent focus:outline-none text-foreground placeholder:text-muted-foreground"
+            value={prompt}
+            onChange={(e) => setPrompt(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Ask Agent_P anything..."
+            disabled={isLoading}
+          />
+        </div>
         <button
           type="submit"
           className="p-2 rounded-lg bg-primary text-primary-foreground disabled:bg-muted disabled:text-muted-foreground transition-colors duration-300"
